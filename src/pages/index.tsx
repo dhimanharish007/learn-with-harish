@@ -2,6 +2,7 @@ import type {ReactNode} from 'react';
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
 
@@ -66,11 +67,12 @@ function HomepageHeader() {
 }
 
 function BookCard({title, description, href, cover}: Book) {
+  const coverSrc = useBaseUrl(cover ?? '');
   return (
     <Link to={href} className={styles.bookCard}>
       {cover && (
         <img
-          src={cover}
+          src={coverSrc}
           alt={`${title} cover`}
           className={styles.bookCardCover}
         />
