@@ -15,6 +15,46 @@
   --ifm-color-primary-lightest: #8d87ee;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+
+  /* Heading 1: reduced 25% from Infima's default (2rem).
+     Heading 2: 1.2rem everywhere. */
+  --ifm-h1-font-size: 1.5rem;
+  --ifm-h2-font-size: 1.2rem;
+}
+
+/* Infima gives the first H1 and top-level H2s inside doc/blog content
+   (.markdown) their own larger sizes (3rem / 2rem) that override the
+   :root values above. Every font-size that was 3rem is now 2rem, and
+   H2 is 1.2rem everywhere, including here. */
+.markdown h1:first-child {
+  --ifm-h1-font-size: 2rem;
+}
+
+.markdown > h2 {
+  --ifm-h2-font-size: 1.2rem;
+}
+
+@media (max-width: 576px) {
+  .markdown h1:first-child {
+    --ifm-h1-font-size: 1.5rem;
+  }
+
+  .markdown > h2 {
+    --ifm-h2-font-size: 1.2rem;
+  }
+}
+
+/* Doc category index page title (e.g. "Statistics for Data Science:
+   Concepts, Methods") — sets its own --ifm-h1-font-size that bypasses
+   the :root override above, so it needs a direct override. */
+.title_kItE {
+  font-size: 2rem;
+}
+
+/* Blog post title — also hardcodes font-size: 3rem independently of
+   the :root override above. */
+.title_f1Hy {
+  font-size: 2rem;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
