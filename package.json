@@ -4,7 +4,10 @@
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
+    "gen-doc-topics": "node scripts/generate-doc-topics.mjs",
+    "prestart": "npm run gen-doc-topics",
     "start": "docusaurus start",
+    "prebuild": "npm run gen-doc-topics",
     "build": "docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
@@ -31,6 +34,7 @@
     "@docusaurus/tsconfig": "3.10.2",
     "@docusaurus/types": "3.10.2",
     "@types/react": "^19.0.0",
+    "github-slugger": "^1.5.0",
     "typescript": "~6.0.2"
   },
   "browserslist": {

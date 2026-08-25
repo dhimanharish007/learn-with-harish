@@ -39,6 +39,19 @@ const books: Book[] = [
     href: '/docs/category/statistics-for-data-science-concepts-methods',
     cover: '/img/statistics-for-data-science-cover.jpg',
   },
+  {
+    title: 'Federated Learning',
+    description:
+      'From fundamentals to advanced applications — architectures, algorithms, privacy, security, and trustworthy AI.',
+    href: '/docs/category/federated-learning-from-fundamentals-to-advanced-applications',
+    cover: '/img/federated-learning.png',
+  },
+  {
+    title: 'Fundamentals of Machine Learning and Deep Learning',
+    description:
+      'From core ML algorithms to neural networks and transformers, with hands-on Python and end-to-end projects.',
+    href: '/docs/category/fundamentals-of-machine-learning-and-deep-learning',
+  },
   // Add the next book here, e.g.:
   // {
   //   title: 'Another Book Title',
